@@ -1,0 +1,26 @@
+<%= form_for(stupid) do |f| %>
+  <% if stupid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stupid.errors.count, "error") %> prohibited this stupid from being saved:</h2>
+
+      <ul>
+      <% stupid.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Quotes %>
+    <%= f.text_field :Quotes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

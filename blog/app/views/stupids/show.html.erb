@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stupid.Name %>
+</p>
+
+<p>
+  <strong>Quotes:</strong>
+  <%= @stupid.Quotes %>
+</p>
+
+<%= link_to 'Edit', edit_stupid_path(@stupid) %> |
+<%= link_to 'Back', stupids_path %>
